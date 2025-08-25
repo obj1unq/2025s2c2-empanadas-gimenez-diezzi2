@@ -11,15 +11,12 @@ object galvan {
     sueldo = nuevoSueldo
   }
   method cobrar() {
-    if (deuda == 0) {
-      dinero = dinero + sueldo
-    }
-    else if (sueldo > deuda) {
+    if (sueldo >= deuda) {
       dinero = sueldo - deuda
       deuda = 0
     }
     else
-      deuda = (sueldo - deuda) * (-1)
+      deuda = deuda - sueldo
   }
   method gastar(_dinero) {
     if (dinero - _dinero < 0) {
