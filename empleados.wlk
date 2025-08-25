@@ -14,7 +14,7 @@ object galvan {
     if (deuda == 0) {
       dinero = dinero + sueldo
     }
-    else if (sueldo - deuda > 0) {
+    else if (sueldo > deuda) {
       dinero = sueldo - deuda
       deuda = 0
     }
